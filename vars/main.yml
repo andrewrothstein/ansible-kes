@@ -1,0 +1,7 @@
+---
+# vars file for kes
+kes_platform: '{{ kes_os }}-{{ kes_arch }}'
+kes_url: '{{ kes_mirror }}/v{{ kes_ver }}/kes-{{ kes_platform }}{{ kes_dotexe | default("") }}'
+kes_checksum: '{{ kes_checksums[kes_ver][kes_platform] }}'
+kes_installed_exe: '{{ kes_install_dir }}/kes-{{ kes_ver }}-{{ kes_platform }}{{ kes_dotexe | default("") }}'
+kes_installed_link: '{{ kes_install_dir }}/kes'

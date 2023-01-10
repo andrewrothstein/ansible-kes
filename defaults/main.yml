@@ -1,9 +1,11 @@
 ---
 # defaults file for kes
-kes_ver: 0.18.0
+kes_ver: 0.22.2
 kes_mirror: https://github.com/minio/kes/releases/download
-kes_os: linux
-kes_arch: amd64
+kes_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 kes_install_dir: /usr/local/bin
 kes_checksums:
   '0.13.6':
@@ -186,3 +188,18 @@ kes_checksums:
     linux-s390x: sha256:227659bce6fa6b060df19f412dabf3839685a91d3f171fc5d46d0263d6b157a8
     # https://github.com/minio/kes/releases/download/v0.18.0/kes-windows-amd64.exe
     windows-amd64: sha256:057c921a0a888f9ff56b7761fc35edf47d0e6065345abb91f6351bdfa1e90a2b
+  '0.22.2':
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-darwin-amd64
+    darwin-amd64: sha256:d3458c7c2c4c67ea025ffd9853b7ec96b41030d4375caffbb6074c62a7325670
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-darwin-arm64
+    darwin-arm64: sha256:2628b93e0f300f83ac6c282c34750c09aa2110a010604eca1386ef78a061010c
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-linux-amd64
+    linux-amd64: sha256:a3f86f7010beba645e9af6b279b63be82680bc23607ccdc0078ac5be90bb3a05
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-linux-arm64
+    linux-arm64: sha256:e90287e877a43c3f09bbd086c6692014b9bd40f14b61fbae43f284782a751881
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-linux-ppc64le
+    linux-ppc64le: sha256:ef63f4e36f8ebb35d49528bead2e265b588518025ad453d11a3d21e3d5e43651
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-linux-s390x
+    linux-s390x: sha256:b6d6e8418939b7823a74d0ea717d7879160e8d1ea56254d0a14582f185b4fffe
+    # https://github.com/minio/kes/releases/download/v0.22.2/kes-windows-amd64.exe
+    windows-amd64: sha256:6e4be55f09ee239852661f0ead455eec693099449fa6d052247f7321770a2217

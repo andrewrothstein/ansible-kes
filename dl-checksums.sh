@@ -12,8 +12,9 @@ dl()
     local arch=$3
     local dotexe=${4:-}
     local platform="${os}-${arch}"
-    local file="bosh-cli-${ver}-${platform}${dotexe}"
-    local url="$MIRROR/v$ver/kes-${platform}${dotexe}"
+    # https://github.com/minio/kes/releases/download/2023-11-10T10-44-28Z/kes-linux-amd64
+    local url="$MIRROR/$ver/kes-${platform}${dotexe}"
+
     local lfile="$DIR/kes-${ver}-${platform}${dotexe}"
     if [ ! -e $lfile ];
     then
@@ -26,13 +27,10 @@ dl()
 dl_ver() {
     local ver=$1
     printf "  '%s':\n" $ver
-    dl $ver darwin amd64
     dl $ver darwin arm64
     dl $ver linux amd64
     dl $ver linux arm64
-    dl $ver linux ppc64le
-    dl $ver linux s390x
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-0.22.2}
+dl_ver ${1:-"2023-11-10T10-44-28Z"}

@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -9,18 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: downloading {{ kes_url }} to {{ kes_installed_exe }}
-  become: yes
+- name: Downloading {{ kes_url }} to {{ kes_installed_exe }}
+  become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ kes_url }}'
     dest: '{{ kes_installed_exe }}'
     checksum: '{{ kes_checksum }}'
-    mode: 0755
-- name: linking {{ kes_installed_link }} to {{ kes_installed_exe }}
-  become: yes
+    mode: '755'
+- name: Linking {{ kes_installed_link }} to {{ kes_installed_exe }}
+  become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ kes_installed_exe }}'
     dest: '{{ kes_installed_link }}'
     state: link

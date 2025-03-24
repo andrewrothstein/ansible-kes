@@ -1,6 +1,6 @@
 ---
 # defaults file for kes
-kes_ver: '2023-11-10T10-44-28Z'
+kes_ver: '2025-03-12T09-35-18Z'
 kes_mirror: https://github.com/minio/kes/releases/download
 kes_arch_map:
   aarch64: arm64
@@ -17,3 +17,12 @@ kes_checksums:
     linux-arm64: sha256:732cabd0e0c06c8d9ec2579181a7dfe1e585819753ca2cd0498aff7f982fa9d4
     # https://github.com/minio/kes/releases/download/2023-11-10T10-44-28Z/kes-windows-amd64.exe
     windows-amd64: sha256:24accdc372537a12528112c80a88542621e6c9c46440100705c60593c49e580a
+  '2025-03-12T09-35-18Z':
+    # https://github.com/minio/kes/releases/download/2025-03-12T09-35-18Z/kes-darwin-arm64
+    darwin-arm64: sha256:fec9c3363a2b722a6d1cdb2ec9207286509e41175984f1adc2f486f75266a088
+    # https://github.com/minio/kes/releases/download/2025-03-12T09-35-18Z/kes-linux-amd64
+    linux-amd64: sha256:9f07258d121a69594125c6d2b569145c9b75ce80d20eaf27ab76863b689558ef
+    # https://github.com/minio/kes/releases/download/2025-03-12T09-35-18Z/kes-linux-arm64
+    linux-arm64: sha256:3277419d221591043d7f99b0816d530f139a337cf09680f7cc7bf19f6126df0e
+    # https://github.com/minio/kes/releases/download/2025-03-12T09-35-18Z/kes-windows-amd64.exe
+    windows-amd64: sha256:48c768b579dca171f9882385ba1d0d665e1e36d2796148bfd28fc9ef52498564

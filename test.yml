@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.kes
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/kes --version
-    register: kes_test_output
-  - name: kes --version
-    debug:
-      msg: '{{ kes_test_output.stdout }}'
+    - name: Executing 'kes --verison'
+      ansible.builtin.command: kes --version
+      changed_when: false
+      register: kes_test_output
+    - name: Output from 'kes --version'
+      ansible.builtin.debug:
+        msg: '{{ kes_test_output.stdout }}'

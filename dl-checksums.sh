@@ -33,4 +33,4 @@ dl_ver() {
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-"2023-11-10T10-44-28Z"}
+dl_ver ${1:-"2025-03-12T09-35-18Z"}
